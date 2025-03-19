@@ -36,3 +36,7 @@ button {
   height: 30px;
   border: 2px solid blue;
 }
+
+.game__canvas-cell_change-color {
+  background-color: black;
+}
