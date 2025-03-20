@@ -28,15 +28,4 @@ button {
   display: flex;
   flex-wrap: wrap;
   width: 480px;
-  height: 480px;
-}
-
-.game__canvas-cell {
-  width: 30px;
-  height: 30px;
-  border: 2px solid blue;
-}
-
-.game__canvas-cell_change-color {
-  background-color: black;
 }
