@@ -29,3 +29,7 @@ button {
   flex-wrap: wrap;
   width: 480px;
 }
+
+.game__button_active {
+  color: red;
+}
