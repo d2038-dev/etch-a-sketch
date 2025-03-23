@@ -28,6 +28,10 @@ function toggleRandomColorMode() {
       canvasCell.removeEventListener("mouseover", makeBackgroundBlack);
       canvasCell.addEventListener("mouseover", makeBackgroundRandom);
     });
+
+    if (darkeningEffectBTN.classList.contains(activeClass)) {
+      darkeningEffectBTN.click();
+    }
   }
   this.classList.toggle(activeClass);
 }
@@ -51,6 +55,10 @@ function toggleDarkeningEffect() {
         capture: true,
       });
     });
+
+    if (randomColorBTN.classList.contains(activeClass)) {
+      randomColorBTN.click();
+    }
   }
 
   this.classList.toggle("game__button_active");
@@ -82,10 +90,11 @@ function renderGrid(gridSize) {
   canvasWidth = canvasWidth.slice(0, -2);
   canvasWidth = +canvasWidth;
   const cellSize = canvasWidth / gridSize;
+
   for (let index = 0; index < gridSize * gridSize; index++) {
     const canvasCell = document.createElement("div");
-    canvasCell.style.cssText = `width: ${cellSize}px; height: ${cellSize}px;`;
 
+    canvasCell.style.cssText = `width: ${cellSize}px; height: ${cellSize}px;`;
     canvasCell.addEventListener("mouseover", makeBackgroundBlack);
 
     canvas.appendChild(canvasCell);
