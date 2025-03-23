@@ -4,20 +4,19 @@ const darkeningEffectBTN = document.querySelector(
   "[data-id='darkening-effect-btn']"
 );
 const canvas = document.querySelector("[data-id='canvas']");
+const activeClass = "game__button_active";
 
 renderGrid(16);
 
 function initializeGrid() {
   const gridSize = getGridSize();
   clearCanvas();
-  randomColorBTN.classList.remove("game__button_active");
-  darkeningEffectBTN.classList.remove("game__button_active");
+  randomColorBTN.classList.remove(activeClass);
+  darkeningEffectBTN.classList.remove(activeClass);
   renderGrid(gridSize);
 }
 
 function toggleRandomColorMode() {
-  const activeClass = "game__button_active";
-
   if (this.classList.contains(activeClass)) {
     canvas.childNodes.forEach((canvasCell) => {
       canvasCell.removeEventListener("mouseover", makeBackgroundRandom);
@@ -37,8 +36,6 @@ function toggleRandomColorMode() {
 }
 
 function toggleDarkeningEffect() {
-  const activeClass = "game__button_active";
-
   if (this.classList.contains(activeClass)) {
     canvas.childNodes.forEach((canvasCell) => {
       canvasCell.removeEventListener("mouseover", progressiveOpacity, {
@@ -61,7 +58,7 @@ function toggleDarkeningEffect() {
     }
   }
 
-  this.classList.toggle("game__button_active");
+  this.classList.toggle(activeClass);
 }
 
 gridSizeBTN.addEventListener("click", initializeGrid);
