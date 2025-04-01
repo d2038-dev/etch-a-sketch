@@ -11,9 +11,9 @@
 }
 
 body {
-  line-height: 1.5;
-  font-family: Arial, Helvetica, sans-serif;
   color: #fffaf3;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
 }
 
 img {
@@ -22,58 +22,59 @@ img {
 }
 
 button {
-  font: inherit;
   color: inherit;
+  font: inherit;
 }
 
 .layout {
-  background-color: #fef3e2;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background-color: #fef3e2;
 }
 
 .game {
-  background-color: #fa4032;
-  padding: 0 100px;
   border-radius: 20px;
+  padding: 0 100px;
+  width: 600px;
+  background-color: #fa4032;
 }
 
 .game__title {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  font-size: 50px;
+  min-height: 100px;
   font-family: "Lobster", sans-serif;
+  font-size: 50px;
 }
 
 .game__canvas {
-  box-sizing: content-box;
-  background-color: white;
-  /* border: 3px solid red; */
   display: flex;
   flex-wrap: wrap;
-  width: 480px;
+  box-sizing: content-box;
+  width: 400px;
+  background-color: white;
 }
 
 .game__buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  gap: 10px;
+  min-height: 100px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
 
 .game__button {
-  background-color: #fa812f;
-  padding: 10px;
-  min-width: 140px;
-  border-radius: 10px;
   border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 140px;
+  background-color: #fa812f;
 }
 
 .game__button:hover {
